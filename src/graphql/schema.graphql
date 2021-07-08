@@ -1,0 +1,16 @@
+type Query {
+  search(query: String!): [UserType!]
+  getUserRepositories(login: String!): [RepositoryType!]
+}
+
+type UserType {
+  id: String!
+  name: String!
+}
+
+type RepositoryType {
+  id: String!
+  name: String!
+  description: String
+  stargazerCount: Int
+}
